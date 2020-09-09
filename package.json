@@ -1,0 +1,43 @@
+{
+  "name": "arrdep.space",
+  "version": "1.0.0",
+  "description": "Arrivals and Departures Board for Space Missions",
+  "main": "src/index.js",
+  "repository": "git@github.com:aldegoeij/arrdep.space.git",
+  "author": "Alexander L. de Goeij <mail@aldg.nl>",
+  "license": "BSD-3",
+  "private": true,
+  "dependencies": {
+    "next-images": "^1.4.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint-eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.5.3",
+    "@types/node": "^14.6.4",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1"
+  }
+}
