@@ -5,14 +5,16 @@
   "arrivals": [],
   "departures": [
     {
-      "launchDate": "",
-      "launchSite": "",
-      "description": "",
-      "rocketType": "",
-      "rocketDescription": "",
+      "launchDate": "Oct123as4",
+      "launchSite": "Cape Canaveral",
+      "launchCountry": "US",
+      "description": "Some satellites and stuff",
+      "rocketType": "Falcon 5",
+      "rocketDescription": "bla bla bla",
       "payloadType": "satellite",
       "payloadDescription": "satellite",
-      "isManned": false
+      "isManned": false,
+      "launchSource":"siteX"
     }
   ]
 }
