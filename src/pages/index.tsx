@@ -13,10 +13,16 @@ function Home({ arrDepData }) {
       <Head>
         <title>ARRDEP.SPACE</title>
       </Head>
-      <h1 style={{ paddingTop: 50, paddingBottom: 50 }}>
-        Arrivals &amp; Departures ... from Space
-      </h1>
+      <h1>Arrivals &amp; Departures ... from Space</h1>
       <MainTable data={arrDepData} />
+      <h2 style={{ paddingTop: 50 }}>What's this about?</h2>
+      <p>Well..</p>
+      <h2 style={{ paddingTop: 50 }}>Sources</h2>
+      <p>The launch data is collected from multiple sources, at the moment fully manual :)</p>
+      <ol>
+        <li>one</li>
+      </ol>
+      <h2 style={{ paddingTop: 50 }}>Contributing</h2>
     </Layout>
   )
 }
