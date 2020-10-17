@@ -44,16 +44,18 @@ const ArrDepTable = (data) => {
 
 export default function MainTable({ data }) {
   return (
-    <Tabs defaultActiveKey="deps" id="arrdep">
-      <Tab eventKey="arrs" title="ARRIVALS">
-        <ArrDepTable data={data} />
-      </Tab>
-      <Tab eventKey="deps" title="DEPARTURES">
-        <ArrDepTable data={data} />
-      </Tab>
-      <Tab eventKey="time" title="All" disabled>
-        <ArrDepTable data={data} />
-      </Tab>
-    </Tabs>
+    <div style={{ paddingTop: 50 }}>
+      <Tabs defaultActiveKey="deps" id="arrdep">
+        <Tab eventKey="arrs" title="ARRIVALS">
+          <ArrDepTable data={data} />
+        </Tab>
+        <Tab eventKey="deps" title="DEPARTURES">
+          <ArrDepTable data={data} />
+        </Tab>
+        <Tab eventKey="time" title="All" disabled>
+          <ArrDepTable data={data} />
+        </Tab>
+      </Tabs>
+    </div>
   )
 }

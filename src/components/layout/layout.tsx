@@ -22,14 +22,15 @@ export default function Layout({ children, home }) {
         <Navbar />
       </header>
       <main>{children}</main>
-      <footer>
-        <p style={{ textAlign: "center" }}>
+      <footer style={{ paddingTop: 50, textAlign: "center", color: "gray" }}>
+        <p>
           BSD-3 licensed. Issues and forking at{" "}
           <a href="https://github.com/aldegoeij/arrdep.space" target="_blank" rel="noreferrer">
             GitHub
           </a>
           .
         </p>
+        <p>Built for my two boys, with hope they see space travel in their lifetime!</p>
       </footer>
     </Container>
   )

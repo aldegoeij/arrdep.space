@@ -5,7 +5,7 @@ import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-boots
 
 export default function Navigation({ home }) {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" style={{ marginBottom: 50 }}>
       <Navbar.Brand href="#home">ARRDEP.SPACE</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
