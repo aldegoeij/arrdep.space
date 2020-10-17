@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "SomeData",
+  "lastUpdatedEpoch": "1643341413234123",
+  "sha256": "yfvbhjytrdvbjgfvbnkuh",
+  "arrivals": [],
+  "departures": [
+    {
+      "launchDate": "",
+      "launchSite": "",
+      "description": "",
+      "rocketType": "",
+      "rocketDescription": "",
+      "payloadType": "satellite",
+      "payloadDescription": "satellite",
+      "isManned": false
+    }
+  ]
+}
