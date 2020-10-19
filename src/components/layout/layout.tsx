@@ -25,12 +25,25 @@ export default function Layout({ children, home }) {
       <footer style={{ paddingTop: 50, textAlign: "center", color: "gray" }}>
         <p>
           BSD-3 licensed. Issues and forking at{" "}
-          <a href="https://github.com/aldegoeij/arrdep.space" target="_blank" rel="noreferrer">
+          <a
+            id="footer_github_repo"
+            href="https://github.com/aldegoeij/arrdep.space"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub Repository"
+          >
             GitHub
           </a>
           .
         </p>
         <p>Built for my two boys, with hope they see space travel in their lifetime!</p>
+        <p>
+          Feel free to read our{" "}
+          <Link href="/privacy" passHref>
+            Privacy Policy
+          </Link>{" "}
+          you&apos;ll find it similar to everyone else&apos;s.
+        </p>
       </footer>
     </Container>
   )

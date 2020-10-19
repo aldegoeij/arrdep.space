@@ -1,8 +1,11 @@
 import * as React from "react"
 import Head from "next/head"
 import Link from "next/link"
-import { Tabs, Tab, Table } from "react-bootstrap"
+import { Tabs, Tab, Table, Badge } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSpaceShuttle, faSatellite, faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
+import { InfoCircle } from "./info-circle"
+import { FlagIcon } from "./flag-icon"
 
 // <FontAwesomeIcon icon={["fal", "coffee"]} />
 
@@ -12,18 +15,42 @@ const ArrDepTable = (data) => {
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>
+              Date <InfoCircle tip="Time and date of (scheduled) launch / landing." />
+            </th>
+            <th>
+              Site <InfoCircle tip="Location of launch / landing." />
+            </th>
+            <th>
+              Mission <InfoCircle tip="Short description of mission, click for more information." />
+            </th>
+            <th>
+              Rocket <InfoCircle tip="Type of launching rocket / spacecraft." />
+            </th>
+            <th>
+              Operator <InfoCircle tip="Operator of the launch / landing." />
+            </th>
+            <th>
+              Status <InfoCircle tip="Status of the planned launch / landing." />
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>Thu 23rd</td>
+            <td>
+              <FlagIcon countryCode="US" /> <span>Cape Canveral</span>
+            </td>
+            <td>
+              {/* Mission type */}
+              <FontAwesomeIcon icon={faSpaceShuttle} /> {/* Short mission description */}
+              ISS Exp. 63 Landing
+            </td>
+            <td>Falcon 5 Heavy</td>
+            <td>Space-X</td>
+            <td>
+              <Badge variant="secondary">CANCELLED</Badge>
+            </td>
           </tr>
           <tr>
             <td>2</td>
