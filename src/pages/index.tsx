@@ -6,14 +6,14 @@ import Layout from "../components/layout/layout"
 import MainTable from "../components/main-table"
 import { GetArrDep } from "../libs/api"
 
-export default function Home({ arrDepData }): React.ReactElement {
+export default function Home({ apiData }): React.ReactElement {
   return (
     <Layout home>
       <Head>
         <title>ARRDEP.SPACE</title>
       </Head>
       <h1>Arrivals &amp; Departures ... from Space</h1>
-      <MainTable data={arrDepData} />
+      <MainTable data={apiData} />
       <h2 style={{ paddingTop: 50 }}>Sources</h2>
       <p>
         The launch data on this site is collected from multiple sources, at the moment 100% manual
@@ -30,10 +30,11 @@ export default function Home({ arrDepData }): React.ReactElement {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const arrDepData = await GetArrDep()
+  const apiData = await GetArrDep()
+
   return {
     props: {
-      arrDepData,
+      apiData,
     },
   }
 }
