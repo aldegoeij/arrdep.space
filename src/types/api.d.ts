@@ -1,14 +1,15 @@
 type APIDataElement = {
   dateTime: string
   dateTimeEpoch: number
-  flightNumber: "string"
-  flightType: "launch" | "landing"
+  number: "string"
+  type: "launch" | "landing"
   flightStatus: "PLANNED" | "CANCELLED" | string
-  flightDetails: string
-  flightDetailsUrl: string
+  details: string
+  detailsUrl: string
   earthSite: string
   earthSiteCountryCode: string
   spaceSite: string
+  spaceSiteType: "planet" | "astroid" | "iss" | "orbit" | string
   payloadType: "satellite" | "space-shuttle" | string
   payloadDescription: string
   rocketType: string
@@ -17,6 +18,7 @@ type APIDataElement = {
   dataSource: string
   missionUrl: string
   operator: string
+  operatorUrl: string
 }
 
 export type APIData = {
