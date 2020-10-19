@@ -5,14 +5,26 @@
   "flights": [
     {
       "dateTime": "Thu 23rd Oct",
-      "flightType": "launch" ,
-      "flightStatus": "PLANNED" ,
+      "type": "launch" ,
+      "status": "PLANNED" ,
+      "details": "This is an awesome launch This is an awesome launch!",
       "earthSite": "ESA The Hague",
       "earthSiteCountryCode": "nl",
       "spaceSite": "Mars",
       "payloadType": "satellite" ,
-      "description": "This is an awesome launch This is an awesome launch!",
       "rocketType": "Falcon-5 Heavy",
+      "operator": "Space-X"
+    },
+    {
+      "dateTime": "Oct 20th",
+      "type": "launch" ,
+      "status": "PLANNED" ,
+      "details": "\"In Focus\": CE-SAT-2B Earth-imaging microsatellite for Canon Electronics and nine SuperDove Earth-imaging nanosatellites for Planet",
+      "earthSite": "LC1 - Mahia Peninsula, NZ",
+      "earthSiteCountryCode": "nz",
+      "spaceSite": "LEO",
+      "payloadType": "satellite" ,
+      "rocketType": "Rocket Lab Electron",
       "operator": "Space-X"
     }
   ]
