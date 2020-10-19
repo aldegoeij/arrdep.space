@@ -28,9 +28,6 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
               Date <InfoCircle tip="Time and date of (scheduled) launch / landing." />
             </th>
             <th>
-              # <InfoCircle tip="Flight number." />
-            </th>
-            <th>
               Earth Site <FontAwesomeIcon icon={faGlobeAfrica} />
             </th>
             <th>
@@ -55,7 +52,6 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
             return (
               <tr key={idx.toString()}>
                 <td>{flight.dateTime}</td>
-                <td>#</td>
                 <td>
                   {/* Earth Site */}
                   <FlagIcon countryCode={flight.earthSiteCountryCode} />{" "}
@@ -84,12 +80,12 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
                     {/* Short mission description */}
                     <a
                       id="flight_details"
-                      href={flight.flightDetailsUrl || "#"}
+                      href={flight.detailsUrl || "#"}
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Flight Details URL"
                     >
-                      {flight.description}
+                      {flight.details}
                     </a>
                   </div>
                 </td>
@@ -111,22 +107,6 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
               </tr>
             )
           })}
-          <tr>
-            <td>Thu 23rd</td>
-            <td>
-              <FlagIcon countryCode="US" /> <span>Cape Canveral</span>
-            </td>
-            <td>
-              {/* Mission type */}
-              <FontAwesomeIcon icon={faSpaceShuttle} /> {/* Short mission description */}
-              ISS Exp. 63 Landing
-            </td>
-            <td>Falcon 5 Heavy</td>
-            <td>Space-X</td>
-            <td>
-              <Badge variant="secondary">CANCELLED</Badge>
-            </td>
-          </tr>
         </tbody>
       </Table>
     </div>
