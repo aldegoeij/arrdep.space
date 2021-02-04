@@ -1,17 +1,34 @@
 import * as React from "react"
-// import App from "next/app";
-import type { AppProps /* , AppContext */ } from "next/app"
+import type { AppProps, NextWebVitalsMetric } from "next/app"
 import { ThemeProvider } from "styled-components"
+import { useEffect } from "react"
+import { useRouter } from "next/router"
+import * as gtag from "../utils/gtag"
 
 import "../styles/global.css"
 import { theme, GlobalStyle } from "../styles/global"
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url)
+    }
+    router.events.on("routeChangeComplete", handleRouteChange)
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
     </ThemeProvider>
   )
+}
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  console.log(metric)
 }
 
 // Only uncomment this method if you have blocking data requirements for
