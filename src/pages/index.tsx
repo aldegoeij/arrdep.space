@@ -4,9 +4,9 @@ import Link from "next/link"
 import { GetStaticProps, GetStaticPaths, GetServerSideProps, NextPageContext } from "next"
 import Layout from "../components/layout/layout"
 import MainTable from "../components/main-table"
-import { GetArrDep } from "../libs/api"
+import { getArrDeps, APIData } from "../libs/api"
 
-export default function Home({ apiData }): React.ReactElement {
+export default function Home({ apiData }: { apiData: APIData }): React.ReactElement {
   return (
     <Layout home>
       <Head>
@@ -30,7 +30,7 @@ export default function Home({ apiData }): React.ReactElement {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const apiData = await GetArrDep()
+  const apiData = await getArrDeps()
 
   return {
     props: {

@@ -2,10 +2,12 @@ import * as React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { Container } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHeart } from "@fortawesome/pro-solid-svg-icons"
 
 import Navbar from "./navigation"
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: { children: React.ReactChild; home: boolean }) {
   return (
     <Container>
       <Head>
@@ -19,7 +21,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header>
-        <Navbar />
+        <Navbar home={home} />
       </header>
       <main>{children}</main>
       <footer style={{ paddingTop: 50, textAlign: "center", color: "gray" }}>
@@ -36,13 +38,16 @@ export default function Layout({ children, home }) {
           </a>
           .
         </p>
-        <p>Built for my two boys, with hope they see space travel in their lifetime!</p>
+        <p>
+          Built for my two boys, with hope they see space travel in their lifetime{" "}
+          <FontAwesomeIcon icon={["fas", "heart"]} />
+        </p>
         <p>
           Feel free to read our{" "}
           <Link href="/privacy" passHref>
             Privacy Policy
-          </Link>{" "}
-          you&apos;ll find it similar to everyone else&apos;s.
+          </Link>
+          , you&apos;ll find it's similar to everyone else&apos;s :)
         </p>
       </footer>
     </Container>

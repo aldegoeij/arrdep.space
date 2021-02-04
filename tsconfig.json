@@ -1,30 +1,24 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    ".eslintrc.js",
-    "*.config.js",
-    "src/pages/_app.js",
-    "src/pages/_app.js",
-    "src/components/Layouts/index.js",
-    "src/components/Headers/index.tsx",
-    "src/components/Accordion/singleAccordion.js"
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
