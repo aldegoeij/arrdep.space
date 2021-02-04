@@ -19,7 +19,7 @@ export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport
       <h4>
         Country: <FlagIcon countryCode={spaceport.countryCode} /> {spaceport.country || "unknown"} |
         Status: <StatusBadge status={spaceport.status} /> |{" "}
-        <a href={spaceport.wiki_url} aria-label="wikipedia link">
+        <a href={spaceport.wiki_url} aria-label="wikipedia link" target="_blank">
           Wikipedia
         </a>
       </h4>
@@ -49,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const apiData = await getSpaceports()
   const apiData = JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString())
-  const spaceport = apiData.filter((i) => i.id === params?.id)
+  const spaceport = apiData.filter((i: Spaceport) => i.id === params?.id)
 
   return {
     props: {

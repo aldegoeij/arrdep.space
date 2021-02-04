@@ -1,3 +1,4 @@
+import * as fs from "fs"
 import * as React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -12,25 +13,32 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
       <Head>
         <title>ARRDEP.SPACE</title>
       </Head>
-      <h1>Arrivals &amp; Departures ... from Space</h1>
+      <h1>Arrivals &amp; Departures ... from Space!</h1>
       <MainTable data={apiData} />
-      <h2 style={{ paddingTop: 50 }}>Sources</h2>
+      <p>&nbsp;</p>
+      <h4>Sources:</h4>
       <p>
-        The launch data on this site is collected from multiple sources, at the moment 100% manual
-        :)
+        The space flights launch and landing data on this site is collected from multiple{" "}
+        <Link href="/sources" passHref>
+          <a aria-label="data sources">sources</a>
+        </Link>
+        , at the moment 100% 'au manuel' :)
       </p>
-      <ol>
-        <li>one</li>
-      </ol>
-      <h2 style={{ paddingTop: 50 }}>What&apos;s this all about?</h2>
+      <p>&nbsp;</p>
+      <h4>What&apos;s this all about?</h4>
       <p>Well..</p>
-      <h2 style={{ paddingTop: 50 }}>Contributing</h2>
+      <h4>Contributing</h4>
     </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const apiData = await getArrDeps()
+  // Generate sitemap for entire site
+  const { generateXML } = require("../utils/sitemap.xml")
+  generateXML()
+
+  // const apiData = await getArrDeps()
+  const apiData = JSON.parse(fs.readFileSync("./public/api/flights.json").toString())
 
   return {
     props: {

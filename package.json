@@ -50,6 +50,7 @@
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.1.2",
+    "serverless": "^2.22.0",
     "typescript": "^4.0.3",
     "webpack": "^5.17.0"
   }
