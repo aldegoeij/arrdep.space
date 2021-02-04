@@ -15,9 +15,11 @@
     "@fortawesome/pro-regular-svg-icons": "^5.15.2",
     "@fortawesome/pro-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@popperjs/core": "^2.6.0",
     "bootstrap": "^4.6.0",
     "bootswatch": "^4.6.0",
     "flag-icon-css": "^3.5.0",
+    "gray-matter": "^4.0.2",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "next": "^10.0.5",
@@ -25,7 +27,11 @@
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "styled-components": "^5.2.1",
+    "styled-reset": "^4.3.4"
   },
   "scripts": {
     "dev": "next dev",
@@ -40,6 +46,7 @@
     "@types/node": "^14.11.10",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.7",
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.1.2",

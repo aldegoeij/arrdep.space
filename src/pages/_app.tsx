@@ -1,11 +1,17 @@
 import * as React from "react"
 // import App from "next/app";
 import type { AppProps /* , AppContext */ } from "next/app"
+import { ThemeProvider } from "styled-components"
 
 import "../styles/global.css"
+import { theme, GlobalStyle } from "../styles/global"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for

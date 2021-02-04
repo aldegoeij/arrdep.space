@@ -1,29 +1,21 @@
 import * as fs from "fs"
 import * as _ from "lodash"
-import Layout from "../components/layout/layout"
+import Head from "next/head"
+import Link from "next/link"
+import Layout from "../../components/layout/layout"
 
 import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
 
 export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport }) {
+  console.debug(spaceport)
+  console.debug("hi")
   return (
     <Layout home>
       <Head>
-        <title>Spaceport: {spaceport.name}</title>
+        <title>{spaceport.name} - Spaceports</title>
       </Head>
-      <h1>Arrivals &amp; Departures ... from Space</h1>
-      <MainTable data={apiData} />
-      <h2 style={{ paddingTop: 50 }}>Sources</h2>
-      <p>
-        The launch data on this site is collected from multiple sources, at the moment 100% manual
-        :)
-      </p>
-      <ol>
-        <li>one</li>
-      </ol>
-      <h2 style={{ paddingTop: 50 }}>What&apos;s this all about?</h2>
-      <p>Well..</p>
-      <h2 style={{ paddingTop: 50 }}>Contributing</h2>
+      <h1>{spaceport.name}</h1>
     </Layout>
   )
 }
@@ -40,7 +32,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      spaceport,
+      spaceport: spaceport[0],
     },
   }
 }

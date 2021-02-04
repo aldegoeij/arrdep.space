@@ -7,7 +7,13 @@ import { faHeart } from "@fortawesome/pro-solid-svg-icons"
 
 import Navbar from "./navigation"
 
-export default function Layout({ children, home }: { children: React.ReactChild; home: boolean }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactChild[]
+  home?: boolean
+}) {
   return (
     <Container>
       <Head>
@@ -39,8 +45,8 @@ export default function Layout({ children, home }: { children: React.ReactChild;
           .
         </p>
         <p>
-          Built for my two boys, with hope they see space travel in their lifetime{" "}
-          <FontAwesomeIcon icon={["fas", "heart"]} />
+          Built for my two boys <FontAwesomeIcon icon={faHeart} /> With hope they can space travel
+          in their lifetime.
         </p>
         <p>
           Feel free to read our{" "}

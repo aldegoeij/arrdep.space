@@ -1,17 +1,37 @@
-import * as React from "react"
+import { GetStaticProps } from "next"
 import Head from "next/head"
-import Link from "next/link"
-import { Table } from "react-bootstrap"
-import Layout from "../components/layout/layout"
 
-export default function Privacy(): React.ReactElement {
+//utils
+import { getHTML, MarkDownHTML } from "../utils/MarkDown"
+import Layout from "../components/layout/layout"
+import { Markdown } from "../components/elements"
+
+// USE terms.md TO CHANGE CONTENT OF THIS PAGE
+
+export default function Privacy({ pageData }: { pageData: MarkDownHTML }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>ARRDEP.SPACE</title>
+        <title>{pageData.title || "Privacy Policy"}</title>
       </Head>
-      <h1>Privacy &amp; Cookie Policy</h1>
-      <p>Well..</p>
+      <h1>{pageData.title}</h1>
+      {pageData.subTitle ? <h4>{pageData.subTitle}</h4> : ""}
+      <p>&nbsp;</p>
+      <Markdown dangerouslySetInnerHTML={{ __html: pageData.contentHtml }} />
+      <p>&nbsp;</p>
     </Layout>
   )
+}
+
+interface Props {
+  pageData?: MarkDownHTML
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageData = await getHTML("privacy")
+  return {
+    props: {
+      pageData,
+    },
+  }
 }
