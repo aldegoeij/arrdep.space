@@ -51,7 +51,7 @@ export default function Layout({
         <p>
           Feel free to read our{" "}
           <Link href="/privacy" passHref>
-            Privacy Policy
+            <a aria-label="Privacy Policy">Privacy Policy</a>
           </Link>
           , you&apos;ll find it's similar to everyone else&apos;s :)
         </p>
