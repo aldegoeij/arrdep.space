@@ -7,6 +7,7 @@ import { Card, Table, Badge } from "react-bootstrap"
 
 import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
+import { StatusBadge, FlagIcon } from "../../components"
 
 export default function SpaceportsOverview({ spaceports }: { spaceports: Spaceport[] }) {
   return (
@@ -44,9 +45,11 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
                   <a aria-label={spaceport.name}>{spaceport.name}</a>
                 </Link>
               </td>
-              <td>{spaceport.country || "unknown"}</td>
               <td>
-                <Badge variant="secondary">{spaceport.status || "unknown"}</Badge>
+                <FlagIcon countryCode={spaceport.countryCode} /> {spaceport.country || "unknown"}
+              </td>
+              <td>
+                <StatusBadge status={spaceport.status} />
               </td>
             </tr>
           ))}
@@ -57,14 +60,20 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const apiData = JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString())
+  const apiData = _.orderBy(
+    JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString()),
+    "name",
+  )
   const paths = apiData.map((i: any) => ({ params: { ...i } }))
   return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const apiData = await getSpaceports()
-
+  // const apiData = await getSpaceports()
+  const apiData = _.orderBy(
+    JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString()),
+    "name",
+  )
   return {
     props: {
       spaceports: apiData,

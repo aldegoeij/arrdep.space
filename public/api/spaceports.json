@@ -1,4 +1,71 @@
 [
-  {"name":"spaceport1", "id":"abc123"},
-  {"name":"spaceport2", "id":"def456"}
+  {
+    "id": "GC0015",
+    "lid": "GC0015",
+    "name": "Baikonur Cosmodrome",
+    "country": "Kazakhstan",
+    "countryCode": "ru",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Baikonur_Cosmodrome",
+    "url": "http://baikonurtour.com/"
+  },
+  {
+    "id": "XMR",
+    "icao": "KXMR",
+    "lid": "XMR",
+    "name": "Cape Canaveral Space Force Station",
+    "country": "Florida, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Space_Force_Station"
+  },
+  {
+    "id": "KSC",
+    "lid": "KSC",
+    "name": "Kennedy Space Center",
+    "country": "Florida, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Kennedy_Space_Center"
+  },
+  {
+    "id": "JSLC",
+    "lid": "JSLC",
+    "name": "Jiuquan Satellite Launch Center",
+    "alternateNames": ["Base 20", "酒泉卫星发射中心"],
+    "country": "Inner Mongolia, China",
+    "countryCode": "cn",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center"
+  },
+  {
+    "id": "TSLC",
+    "lid": "TSLC",
+    "name": "Taiyuan Satellite Launch Center",
+    "alternateNames": ["Base 25", "二十五基地"],
+    "country": "Shanxi, China",
+    "countryCode": "cn",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center"
+  },
+  {
+    "id": "WSLC",
+    "lid": "WSLC",
+    "name": "Wenchang Spacecraft Launch Site",
+    "alternateNames": ["文昌航天发射场"],
+    "country": "Hainan, China",
+    "countryCode": "cn",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Wenchang_Spacecraft_Launch_Site"
+  },
+  {
+    "id": "XSLC",
+    "lid": "XSLC",
+    "name": "Xichang Satellite Launch Center",
+    "alternateNames": ["Base 27", "西昌卫星发射中心"],
+    "country": "Sichuan, China",
+    "countryCode": "cn",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center"
+  }
 ]
