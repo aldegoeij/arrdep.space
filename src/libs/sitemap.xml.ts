@@ -16,13 +16,15 @@ export function generateXML() {
   const regex = /^([^_].*)\.(ts|tsx|js|jsx)$/
 
   for (const f of readdirSync(pathJoin(process.cwd(), "/src/pages"))) {
-    if (regex.test(f)) {
+    const test = regex.test(f)
+    const result = regex.exec(f)
+    if (test) {
       xmlData.push(`
   <url>
-    <loc>https://tracqapp.com/${regex.exec(f)[1]}</loc>
+    <loc>https://tracqapp.com/${result ? result[1] : "null"}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>${regex.exec(f)[1] === "index" ? "0.9" : "0.5"}</priority>
+    <priority>${result && result[1] === "index" ? "0.9" : "0.5"}</priority>
   </url>`)
     }
   }

@@ -1,4 +1,4 @@
-type APIDataElement = {
+export type APIDataElement = {
   dateTime: string
   dateTimeEpoch: number
   number: "string"

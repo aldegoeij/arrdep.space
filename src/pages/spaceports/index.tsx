@@ -59,15 +59,6 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const apiData = _.orderBy(
-    JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString()),
-    "name",
-  )
-  const paths = apiData.map((i: any) => ({ params: { ...i } }))
-  return { paths, fallback: false }
-}
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const apiData = await getSpaceports()
   const apiData = _.orderBy(

@@ -1,12 +1,16 @@
 import * as React from "react"
 import type { AppProps, NextWebVitalsMetric } from "next/app"
-import { ThemeProvider } from "styled-components"
+import { MDXProvider } from "@mdx-js/react"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
 import * as gtag from "../utils/gtag"
 
 import "../styles/global.css"
-import { theme, GlobalStyle } from "../styles/global"
+
+const components = {
+  pre: (props) => <div {...props} />,
+  code: (props) => <pre style={{ color: "tomato" }} {...props} />,
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -20,11 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
+  return <Component {...pageProps} />
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
