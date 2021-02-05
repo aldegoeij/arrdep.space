@@ -10,6 +10,7 @@ import {
   faGlobeAfrica,
   faSolarSystem,
   faStarship,
+  faPoo,
 } from "@fortawesome/pro-solid-svg-icons"
 import { InfoCircle } from "./info-circle"
 import { FlagIcon } from "./flag-icon"
@@ -48,65 +49,82 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
           </tr>
         </thead>
         <tbody>
-          {data.flights.map((flight, idx) => {
-            return (
-              <tr key={idx.toString()}>
-                <td>{flight.dateTime}</td>
-                <td>
-                  {/* Earth Site */}
-                  <FlagIcon countryCode={flight.earthSiteCountryCode} />{" "}
-                  <span>{flight.earthSite || "missing"}</span>
-                </td>
-                <td>
-                  {/* Space Site */}
-                  {flight.spaceSite?.toUpperCase() === "ISS" ? (
-                    <FontAwesomeIcon icon={faStarship} />
-                  ) : (
-                    ""
-                  )}{" "}
-                  <span>{flight.spaceSite || "missing"}</span>
-                </td>
-                <td>
-                  <div
-                    style={{
-                      width: 250,
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                    }}
-                  >
-                    {/* Mission type */}
-                    <PayloadIcon payloadType={flight.payloadType} />{" "}
-                    {/* Short mission description */}
+          {data.flights !== [] ? (
+            <tr>
+              <td colSpan={7} style={{ textAlign: "center" }}>
+                <p>
+                  <FontAwesomeIcon icon={faPoo} /> No flights currently in the database...
+                </p>
+                <p>
+                  But check out our overview of{" "}
+                  <Link href="/spaceports" passHref>
+                    <a aria-label="spaceports overview">spaceports</a>
+                  </Link>
+                  !
+                </p>
+              </td>
+            </tr>
+          ) : (
+            data.flights.map((flight, idx) => {
+              return (
+                <tr key={idx.toString()}>
+                  <td>{flight.dateTime}</td>
+                  <td>
+                    {/* Earth Site */}
+                    <FlagIcon countryCode={flight.earthSiteCountryCode} />{" "}
+                    <span>{flight.earthSite || "missing"}</span>
+                  </td>
+                  <td>
+                    {/* Space Site */}
+                    {flight.spaceSite?.toUpperCase() === "ISS" ? (
+                      <FontAwesomeIcon icon={faStarship} />
+                    ) : (
+                      ""
+                    )}{" "}
+                    <span>{flight.spaceSite || "missing"}</span>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        width: 250,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {/* Mission type */}
+                      <PayloadIcon payloadType={flight.payloadType} />{" "}
+                      {/* Short mission description */}
+                      <a
+                        id="flight_details"
+                        href={flight.detailsUrl || "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Flight Details URL"
+                      >
+                        {flight.details}
+                      </a>
+                    </div>
+                  </td>
+                  <td>Falcon 5 Heavy</td>
+                  <td>
                     <a
-                      id="flight_details"
-                      href={flight.detailsUrl || "#"}
+                      id="operator_details"
+                      href={flight.operatorUrl || "#"}
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Flight Details URL"
                     >
-                      {flight.details}
+                      {flight.operator || "unkown"}
                     </a>
-                  </div>
-                </td>
-                <td>Falcon 5 Heavy</td>
-                <td>
-                  <a
-                    id="operator_details"
-                    href={flight.operatorUrl || "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Flight Details URL"
-                  >
-                    {flight.operator || "unkown"}
-                  </a>
-                </td>
-                <td>
-                  <Badge variant="primary">PLANNED</Badge>
-                </td>
-              </tr>
-            )
-          })}
+                  </td>
+                  <td>
+                    <Badge variant="primary">PLANNED</Badge>
+                  </td>
+                </tr>
+              )
+            })
+          )}
         </tbody>
       </Table>
     </div>
