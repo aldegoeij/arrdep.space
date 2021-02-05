@@ -1,3 +1,4 @@
+out/
 .npmrc
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,node,serverless,visualstudiocode,jetbrains+all,dotenv

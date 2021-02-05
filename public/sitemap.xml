@@ -4,20 +4,8 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://tracqapp.com/index</loc>
-    <lastmod>2021-02-04T14:55:34.879Z</lastmod>
+    <lastmod>2021-02-05T11:43:08.914Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tracqapp.com/privacy</loc>
-    <lastmod>2021-02-04T14:55:34.879Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://tracqapp.com/terms</loc>
-    <lastmod>2021-02-04T14:55:34.879Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>

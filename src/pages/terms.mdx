@@ -1,0 +1,22 @@
+import Head from "next/head"
+import Layout from "../components/layout/layout"
+
+export const meta = {
+  title: "Terms & Conditions",
+  subTitle: "At arrdep.space we care deeply for your privacy and the security of your data.",
+}
+
+### Version: _January 1, 2020_
+
+export default ({ children, meta }) => (
+  <Layout>
+    <Head>
+      <title>{meta.title}</title>
+    </Head>
+    <h1>{meta.title}</h1>
+    <h4>{meta.subTitle}</h4>
+    <p>&nbsp;</p>
+    {children}
+    <p>&nbsp;</p>
+  </Layout>
+)

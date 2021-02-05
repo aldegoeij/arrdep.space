@@ -2,7 +2,7 @@ import * as React from "react"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuestionCircle, faSatellite, faSpaceShuttle } from "@fortawesome/pro-regular-svg-icons"
-import { APIDataElement } from "../types/api.d"
+import { APIDataElement } from "../libs/api"
 
 export const PayloadIcon = ({
   payloadType,

@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/pro-solid-svg-icons"
 import { InfoCircle } from "./info-circle"
 import { FlagIcon } from "./flag-icon"
-import { APIData } from "../types/api.d"
+import { APIData } from "../libs/api"
 import { PayloadIcon } from "./payload-icon"
 
 // <FontAwesomeIcon icon={["fal", "coffee"]} />
