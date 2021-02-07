@@ -41,14 +41,14 @@ export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const apiData = JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString())
+  const apiData = JSON.parse(fs.readFileSync("./public/data/spaceports.json").toString())
   const paths = apiData.map((i: any) => ({ params: { ...i } }))
   return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const apiData = await getSpaceports()
-  const apiData = JSON.parse(fs.readFileSync("./public/api/spaceports.json").toString())
+  const apiData = JSON.parse(fs.readFileSync("./public/data/spaceports.json").toString())
   const spaceport = apiData.filter((i: Spaceport) => i.id === params?.id)
 
   return {
