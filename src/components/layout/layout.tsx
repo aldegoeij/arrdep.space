@@ -36,17 +36,24 @@ export default function Layout({
       <main>{children}</main>
       <footer style={{ paddingTop: 50, textAlign: "center", color: "gray" }}>
         <p>
-          BSD-3 licensed. File bugs and improvements on{" "}
+          Launches and landings, to and from space!
+          <br />
+          One central arrivals and departures board for all space flights,
+          <br />
+          to inspire the next generation of space enthusiasts.
+        </p>
+        <p>
+          BSD-3 licensed. File bugs and PRs on{" "}
           <a
             id="footer_github"
-            href="https://github.com/aldegoeij/arrdep.space/issues/new"
+            href="https://github.com/aldegoeij/arrdep.space/issues/"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub Issues Link"
           >
             <FontAwesomeIcon icon={faGithub} /> GitHub
           </a>
-          , get support at{" "}
+          , get support on{" "}
           <a
             id="footer_twitter"
             href="https://twitter.com/ArrDepSpace"
@@ -59,8 +66,8 @@ export default function Layout({
           .
         </p>
         <p>
-          Built with <FontAwesomeIcon icon={faHeart} /> for my two boys, hoping they can space
-          travel in their lifetime.
+          Built with <FontAwesomeIcon icon={faHeart} /> for my two boys, hoping they will travel to
+          space in their lifetime.
         </p>
         <p>
           Feel free to read our{" "}
