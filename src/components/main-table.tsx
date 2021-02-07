@@ -133,7 +133,7 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
 
 export default function MainTable({ data }: { data: APIData }): React.ReactElement {
   return (
-    <div style={{ paddingTop: 50 }}>
+    <div>
       <Tabs defaultActiveKey="all" id="arrdep">
         <Tab eventKey="arrs" title="ARRIVALS" disabled>
           <ArrDepTable data={data} />
