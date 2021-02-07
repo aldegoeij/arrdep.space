@@ -1,5 +1,5 @@
+public/sitemap.xml
 out/
-.npmrc
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,node,serverless,visualstudiocode,jetbrains+all,dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,serverless,visualstudiocode,jetbrains+all,dotenv

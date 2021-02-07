@@ -3,7 +3,7 @@ import Head from "next/head"
 import Link from "next/link"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart } from "@fortawesome/pro-solid-svg-icons"
+import { faHeart, faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
 
 import Navbar from "./navigation"
 
@@ -55,6 +55,11 @@ export default function Layout({
           </Link>
           , you&apos;ll find it's similar to everyone else&apos;s :)
         </p>
+        <p>&nbsp;</p>
+        <p>
+          <FontAwesomeIcon icon={faUserAstronaut} size={"6x"} />
+        </p>
+        <p>&nbsp;</p>
       </footer>
     </Container>
   )

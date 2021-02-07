@@ -3,15 +3,7 @@ import Head from "next/head"
 import Link from "next/link"
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faSpaceShuttle,
-  faSatellite,
-  faUserAstronaut,
-  faGlobeAfrica,
-  faSolarSystem,
-  faStarship,
-  faPoo,
-} from "@fortawesome/pro-solid-svg-icons"
+import { faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 export default function Navigation({ home }: { home?: boolean }) {
