@@ -1,0 +1,29 @@
+import Head from "next/head"
+import Layout from "../components/layout/layout"
+
+export const meta = {
+  title: "Data API",
+  subTitle: "Open Data is the only real Data ;)",
+}
+
+## Data API
+
+We fully intend to make all landings and launches to and from space that you can find on our
+arrivals and departures board available via API for reuse in your apps and solutions.
+
+However, at the moment we are still building and testing the API, so check back soon, or reach out
+on [Twitter DM](https://twitter.com/messages/compose?recipient_id=1358400277964083204) if you are
+really, really interested ;)
+
+export default ({ children, meta }) => (
+  <Layout>
+    <Head>
+      <title>{meta.title}</title>
+    </Head>
+    <h1>{meta.title}</h1>
+    <h4>{meta.subTitle}</h4>
+    <p>&nbsp;</p>
+    {children}
+    <p>&nbsp;</p>
+  </Layout>
+)

@@ -27,6 +27,16 @@ export default function Navigation({ home }: { home?: boolean }) {
               Spaceports
             </Nav.Link>
           </Link>
+          <Link href="/education" passHref>
+            <Nav.Link id="nav_education" aria-label="Space Education Page">
+              Education
+            </Nav.Link>
+          </Link>
+          <Link href="/data" passHref>
+            <Nav.Link id="nav_api" aria-label="API Page">
+              API
+            </Nav.Link>
+          </Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">

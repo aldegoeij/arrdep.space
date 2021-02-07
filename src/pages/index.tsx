@@ -82,7 +82,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   generateXML()
 
   // const apiData = await getArrDeps()
-  const apiData = JSON.parse(fs.readFileSync("./public/api/flights.json").toString())
+  const apiData = JSON.parse(fs.readFileSync("./public/data/flights.json").toString())
 
   return {
     props: {
