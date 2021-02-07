@@ -10,7 +10,7 @@ export default function Navigation({ home }: { home?: boolean }) {
   return (
     <Navbar bg="light" expand="lg" style={{ marginBottom: 50 }}>
       <Link href="/" passHref>
-        <Navbar.Brand id="nav_brand">
+        <Navbar.Brand id="nav_brand" aria-label="Home Page">
           <FontAwesomeIcon icon={faUserAstronaut} size={"2x"} />
         </Navbar.Brand>
       </Link>
@@ -18,16 +18,26 @@ export default function Navigation({ home }: { home?: boolean }) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav>
           <Link href="/" passHref>
-            <Nav.Link id="nav_home">Home</Nav.Link>
+            <Nav.Link id="nav_home" aria-label="Home Page">
+              Home
+            </Nav.Link>
           </Link>
           <Link href="/spaceports" passHref>
-            <Nav.Link id="nav_spaceports">Spaceports</Nav.Link>
+            <Nav.Link id="nav_spaceports" aria-label="Spaceports List Page">
+              Spaceports
+            </Nav.Link>
           </Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">
         <Nav>
-          <Nav.Link id="nav_twitter" href="https://twitter.com/ArrDepSpace" target="_blank">
+          <Nav.Link
+            id="nav_twitter"
+            href="https://twitter.com/ArrDepSpace"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Twitter Link"
+          >
             <FontAwesomeIcon icon={faTwitter} />
           </Nav.Link>
         </Nav>

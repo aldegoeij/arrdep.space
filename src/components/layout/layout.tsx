@@ -39,7 +39,7 @@ export default function Layout({
             href="https://github.com/aldegoeij/arrdep.space/issues/new"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub Repository"
+            aria-label="GitHub Issues Link"
           >
             GitHub
           </a>
@@ -48,7 +48,8 @@ export default function Layout({
             id="footer_twitter"
             href="https://twitter.com/ArrDepSpace"
             target="_blank"
-            aria-label="find us on Twitter"
+            aria-label="Twitter Support Link"
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>
