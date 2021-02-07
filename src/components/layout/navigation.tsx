@@ -10,24 +10,24 @@ export default function Navigation({ home }: { home?: boolean }) {
   return (
     <Navbar bg="light" expand="lg" style={{ marginBottom: 50 }}>
       <Link href="/" passHref>
-        <Navbar.Brand>
-          <FontAwesomeIcon icon={faUserAstronaut} />
+        <Navbar.Brand id="nav_brand">
+          <FontAwesomeIcon icon={faUserAstronaut} size={"2x"} />
         </Navbar.Brand>
       </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav>
           <Link href="/" passHref>
-            <Nav.Link>Home</Nav.Link>
+            <Nav.Link id="nav_home">Home</Nav.Link>
           </Link>
           <Link href="/spaceports" passHref>
-            <Nav.Link>Spaceports</Nav.Link>
+            <Nav.Link id="nav_spaceports">Spaceports</Nav.Link>
           </Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">
         <Nav>
-          <Nav.Link href="https://twitter.com/arrdep.space" target="_blank">
+          <Nav.Link id="nav_twitter" href="https://twitter.com/ArrDepSpace" target="_blank">
             <FontAwesomeIcon icon={faTwitter} />
           </Nav.Link>
         </Nav>
