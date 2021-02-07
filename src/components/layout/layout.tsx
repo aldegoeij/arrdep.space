@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 import Navbar from "./navigation"
 
@@ -32,15 +33,24 @@ export default function Layout({
       <main>{children}</main>
       <footer style={{ paddingTop: 50, textAlign: "center", color: "gray" }}>
         <p>
-          BSD-3 licensed. Issues and forking at{" "}
+          BSD-3 licensed. File bugs and improvements on{" "}
           <a
-            id="footer_github_repo"
-            href="https://github.com/aldegoeij/arrdep.space"
+            id="footer_github"
+            href="https://github.com/aldegoeij/arrdep.space/issues/new"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub Repository"
           >
             GitHub
+          </a>
+          , get support at{" "}
+          <a
+            id="footer_twitter"
+            href="https://twitter.com/ArrDepSpace"
+            target="_blank"
+            aria-label="find us on Twitter"
+          >
+            <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>
           .
         </p>
@@ -51,7 +61,9 @@ export default function Layout({
         <p>
           Feel free to read our{" "}
           <Link href="/privacy" passHref>
-            <a aria-label="Privacy Policy">Privacy Policy</a>
+            <a id="footer_privacy" aria-label="Privacy Policy">
+              Privacy Policy
+            </a>
           </Link>
           , you&apos;ll find it's similar to everyone else&apos;s :)
         </p>

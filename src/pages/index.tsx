@@ -26,8 +26,17 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
       </p>
       <p>&nbsp;</p>
       <h4>What&apos;s this all about?</h4>
-      <p>Well..</p>
+      <p>
+        Well... I'm a space-fan and could not find any place on the internet that shows all launches
+        (and landings) in one place so I could show my two little boys what cool things humans are
+        doing on this planet.
+      </p>
       <h4>Contributing</h4>
+      <p>
+        The source code for this repo ~is~ will soon be open source on GitHub, so file and issue if
+        you find a bug or have an improvement for the UI, and if you're interested in contributing
+        to the data gathering and/or API behind this site, reach out on Twitter DM.
+      </p>
     </Layout>
   )
 }
