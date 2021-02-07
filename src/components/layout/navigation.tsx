@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Navigation({ home }: { home?: boolean }) {
   return (
@@ -39,6 +39,15 @@ export default function Navigation({ home }: { home?: boolean }) {
             aria-label="Twitter Link"
           >
             <FontAwesomeIcon icon={faTwitter} />
+          </Nav.Link>
+          <Nav.Link
+            id="nav_github"
+            href="https://github.com/aldegoeij/arrdep.space"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub Link"
+          >
+            <FontAwesomeIcon icon={faGithub} />
           </Nav.Link>
         </Nav>
         <Navbar.Text>

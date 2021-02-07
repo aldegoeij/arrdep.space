@@ -3,6 +3,9 @@ import * as React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { GetStaticProps, GetStaticPaths, GetServerSideProps, NextPageContext } from "next"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faRocketLaunch } from "@fortawesome/pro-solid-svg-icons"
+
 import Layout from "../components/layout/layout"
 import MainTable from "../components/main-table"
 import { getArrDeps, APIData } from "../libs/api"
@@ -14,6 +17,12 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
         <title>ARRDEP.SPACE</title>
       </Head>
       <h1>Arrivals &amp; Departures ... from Space!</h1>
+      <p>
+        Launches and landings, to and from space! One central arrivals and departures board for all
+        space flights, to inspire the next generation of space enthusiasts{" "}
+        <FontAwesomeIcon icon={faRocketLaunch} />
+      </p>
+      <p>&nbsp;</p>
       <MainTable data={apiData} />
       <p>&nbsp;</p>
       <h4>Sources:</h4>
@@ -27,15 +36,41 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
       <p>&nbsp;</p>
       <h4>What&apos;s this all about?</h4>
       <p>
-        Well... I'm a space-fan and could not find any place on the internet that shows all launches
-        (and landings) in one place so I could show my two little boys what cool things humans are
-        doing on this planet.
+        Well... I wanted to tell my two boys what the next flight to space was going to be and could
+        not find any place on the internet that shows all launches (and landings) to and from space
+        in one clear overview, so I decided to built it myself :P
       </p>
+      <p>
+        This website with arrivals and departures board and links to spaceports on Earth and known
+        space is the initial result! We're planning on adding more details about space operators,
+        rocket types used to push payloads to space and much more.
+      </p>
+      <p>Check back soon ;)</p>
+      <p>&nbsp;</p>
       <h4>Contributing</h4>
       <p>
-        The source code for this repo ~is~ will soon be open source on GitHub, so file and issue if
-        you find a bug or have an improvement for the UI, and if you're interested in contributing
-        to the data gathering and/or API behind this site, reach out on Twitter DM.
+        The source code for this website will soon be open sourced on GitHub, so{" "}
+        <a
+          id="index_github_issue"
+          href="https://github.com/aldegoeij/arrdep.space/issues/new"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub Issues Link"
+        >
+          file an issue
+        </a>{" "}
+        if you find a bug, or fork the repo and submit a Pull Request! And if you're interested in
+        contributing to the data gathering and/or API behind this site, reach out on{" "}
+        <a
+          id="index_twitter_support"
+          href="https://twitter.com/messages/compose?recipient_id=1358400277964083204"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Twitter Support Link"
+        >
+          Twitter Direct Message
+        </a>
+        . Looking forward to hearing from you!
       </p>
     </Layout>
   )

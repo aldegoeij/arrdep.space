@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import Navbar from "./navigation"
 
@@ -19,7 +19,10 @@ export default function Layout({
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Learn how to build a personal website using Next.js" />
+        <meta
+          name="description"
+          content="Launches and landings, to and from space! One central arrivals and departures board for all space flights, to inspire the next generation of space enthusiasts."
+        />
         <meta
           property="og:image"
           content="https://og-image.now.sh/ARRDEP.SPACE.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"
@@ -41,7 +44,7 @@ export default function Layout({
             rel="noreferrer"
             aria-label="GitHub Issues Link"
           >
-            GitHub
+            <FontAwesomeIcon icon={faGithub} /> GitHub
           </a>
           , get support at{" "}
           <a
@@ -56,8 +59,8 @@ export default function Layout({
           .
         </p>
         <p>
-          Built for my two boys <FontAwesomeIcon icon={faHeart} /> With hope they can space travel
-          in their lifetime.
+          Built with <FontAwesomeIcon icon={faHeart} /> for my two boys, hoping they can space
+          travel in their lifetime.
         </p>
         <p>
           Feel free to read our{" "}
