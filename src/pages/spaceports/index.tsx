@@ -24,6 +24,7 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
         <Card.Footer>
           Source:{" "}
           <a
+            id="spaceports_wikipedia"
             href="https://en.wikipedia.org/wiki/Spaceport"
             target="_blank"
             aria-label="Wikipedia Link"
@@ -47,7 +48,9 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
               <td>{spaceport.id}</td>
               <td>
                 <Link href={`/spaceports/${spaceport.id}`} passHref>
-                  <a aria-label={spaceport.name}>{spaceport.name}</a>
+                  <a id="spaceport_link" aria-label={spaceport.name}>
+                    {spaceport.name}
+                  </a>
                 </Link>
               </td>
               <td>

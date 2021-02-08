@@ -125,7 +125,7 @@ export default function Layout({
             id="footer_github"
             href="https://github.com/aldegoeij/arrdep.space/issues/"
             target="_blank"
-            rel="nofollow noopener"
+            rel="noopener"
             aria-label="GitHub Issues Link"
           >
             <FontAwesomeIcon icon={faGithub} /> GitHub
@@ -136,7 +136,7 @@ export default function Layout({
             href="https://twitter.com/ArrDepSpace"
             target="_blank"
             aria-label="Twitter Support Link"
-            rel="nofollow noopener"
+            rel="noopener"
           >
             <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>

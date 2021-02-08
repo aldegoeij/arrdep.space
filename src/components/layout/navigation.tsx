@@ -45,7 +45,7 @@ export default function Navigation({ home }: { home?: boolean }) {
             id="nav_twitter"
             href="https://twitter.com/ArrDepSpace"
             target="_blank"
-            rel="nofollow noopener"
+            rel="noopener"
             aria-label="Twitter Link"
           >
             <FontAwesomeIcon icon={faTwitter} />
@@ -54,7 +54,7 @@ export default function Navigation({ home }: { home?: boolean }) {
             id="nav_github"
             href="https://github.com/aldegoeij/arrdep.space"
             target="_blank"
-            rel="nofollow noopener"
+            rel="noopener"
             aria-label="GitHub Link"
           >
             <FontAwesomeIcon icon={faGithub} />
