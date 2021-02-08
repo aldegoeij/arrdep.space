@@ -9,7 +9,7 @@ import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 import Navbar from "./navigation"
 
 const DEFAULT_DESCRIPTION =
-  "Launches and landings, to and from space! One central arrivals and departures board for all space flights, to inspire the next generation of space enthusiasts."
+  "Launches and landings, to and from space! One arrivals and departures board for all space flights, to inspire the next generation of space enthusiasts."
 
 export default function Layout({
   children,
@@ -28,16 +28,16 @@ export default function Layout({
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <title>{title ? `${title} - ` : ""}ARRDEP.SPACE</title>
+        <title>{title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={`${title ? `${title} - ` : ""}ARRDEP.SPACE`}
+          content={title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={`${title ? `${title} - ` : ""}ARRDEP.SPACE`}
+          content={title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}
         ></meta>
         <meta
           key="description"
@@ -54,7 +54,6 @@ export default function Layout({
           name="twitter:description"
           content={description ? description : DEFAULT_DESCRIPTION}
         />
-
         <meta
           key="keywords"
           name="keywords"
