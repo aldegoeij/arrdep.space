@@ -26,7 +26,9 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
       <p>
         The space flights launch and landing data on this site is collected from multiple{" "}
         <Link href="/sources" passHref>
-          <a aria-label="data sources">sources</a>
+          <a id="homepage_sources" aria-label="data sources">
+            sources
+          </a>
         </Link>
         , at the moment 100% 'au manuel' :)
       </p>
@@ -48,10 +50,10 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
       <p>
         The source code for this website will soon be open sourced on GitHub, so{" "}
         <a
-          id="index_github_issue"
+          id="homepage_github_issue"
           href="https://github.com/aldegoeij/arrdep.space/issues/new"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener"
           aria-label="GitHub Issues Link"
         >
           file an issue
@@ -59,10 +61,10 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
         if you find a bug, or fork the repo and submit a Pull Request! And if you're interested in
         contributing to the data gathering and/or API behind this site, reach out on{" "}
         <a
-          id="index_twitter_support"
+          id="homepage_twitter_support"
           href="https://twitter.com/messages/compose?recipient_id=1358400277964083204"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener"
           aria-label="Twitter Support Link"
         >
           Twitter Direct Message

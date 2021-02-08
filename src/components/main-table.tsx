@@ -58,7 +58,9 @@ const ArrDepTable = ({ data }: { data: APIData }): React.ReactElement => {
                 <p>
                   But check out our overview of{" "}
                   <Link href="/spaceports" passHref>
-                    <a aria-label="spaceports overview">spaceports</a>
+                    <a id="nodata_spaceports" aria-label="spaceports overview">
+                      spaceports
+                    </a>
                   </Link>
                   !
                 </p>

@@ -9,7 +9,7 @@ import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
 import { StatusBadge, FlagIcon } from "../../components"
 
-export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport }) {
+export default function Spaceport({ spaceport }: { spaceport: Spaceport }) {
   return (
     <Layout
       title={spaceport.name}
@@ -22,7 +22,13 @@ export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport
       <h4>
         Country: <FlagIcon countryCode={spaceport.countryCode} /> {spaceport.country || "unknown"} |
         Status: <StatusBadge status={spaceport.status} /> |{" "}
-        <a href={spaceport.wiki_url} aria-label="wikipedia link" target="_blank">
+        <a
+          id="spaceport_wikipedia"
+          href={spaceport.wiki_url}
+          aria-label="wikipedia link"
+          target="_blank"
+          rel="nofollow noopener"
+        >
           Wikipedia
         </a>
       </h4>
@@ -37,6 +43,7 @@ export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport
         <Card.Footer>
           Source:{" "}
           <a
+            id="spaceports_wikipedia"
             href="https://en.wikipedia.org/wiki/Spaceport"
             target="_blank"
             aria-label="Wikipedia Link"
