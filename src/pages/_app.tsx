@@ -2,7 +2,7 @@ import * as React from "react"
 import type { AppProps, NextWebVitalsMetric } from "next/app"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
-import * as gtag from "../utils/gtag"
+import * as gtag from "../libs/gtag"
 
 import "../styles/global.css"
 
