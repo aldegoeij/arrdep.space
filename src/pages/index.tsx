@@ -12,7 +12,7 @@ import { getArrDeps, APIData } from "../libs/api"
 
 export default function Home({ apiData }: { apiData: APIData }): React.ReactElement {
   return (
-    <Layout home title="ARRDEP.SPACE - Launches and landings, to and from space!">
+    <Layout home>
       <h1>Arrivals &amp; Departures ... from Space!</h1>
       <p>
         Launches and landings, to and from space! One central arrivals and departures board for all
