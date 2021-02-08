@@ -1,6 +1,7 @@
 import * as React from "react"
 import Head from "next/head"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faUserAstronaut } from "@fortawesome/pro-solid-svg-icons"
@@ -24,20 +25,23 @@ export default function Layout({
   description?: string
   keywords?: Array<string>
 }) {
+  const router = useRouter()
+
   return (
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={`https://arrdep.space${router.asPath}`} />
         <title>{title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}
+          content={title ? `${title} - ARRDEP.SPACE` : "Arrivals & Departures - ARRDEP.SPACE"}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={title ? `${title} - ARRDEP.SPACE` : "ARRDEP.SPACE"}
+          content={title ? `${title} - ARRDEP.SPACE` : "Arrivals & Departures - ARRDEP.SPACE"}
         ></meta>
         <meta
           key="description"
@@ -61,19 +65,33 @@ export default function Layout({
             .concat([
               "space",
               "mission",
+              "missions",
               "flight",
+              "flights",
               "launch",
+              "launches",
               "landing",
+              "landings",
               "arrival",
+              "arrivals",
               "departure",
+              "departures",
               "rocket",
+              "rockets",
               "spaceport",
+              "spaceports",
               "spaceship",
+              "spaceships",
               "spacecraft",
+              "spacecrafts",
               "date",
+              "dates",
               "time",
+              "times",
               "schedule",
+              "schedules",
               "calendar",
+              "calendars",
             ])
             .join(",")}
         />
