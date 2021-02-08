@@ -13,15 +13,15 @@ export function generateXML() {
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">`)
 
-  const regex = /^([^_].*)\.(ts|tsx|js|jsx)$/
+  const regex = /^([^_].*)\.(html)$/
 
-  for (const f of readdirSync(pathJoin(process.cwd(), "/src/pages"))) {
+  for (const f of readdirSync(pathJoin(process.cwd(), "/out"))) {
     const test = regex.test(f)
     const result = regex.exec(f)
     if (test) {
       xmlData.push(`
   <url>
-    <loc>https://tracqapp.com/${result ? result[1] : "null"}</loc>
+    <loc>https://arrdep.space/${result ? result[1] : "null"}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>${result && result[1] === "index" ? "0.9" : "0.5"}</priority>
@@ -29,11 +29,26 @@ export function generateXML() {
     }
   }
 
+  for (const f of readdirSync(pathJoin(process.cwd(), "/out/spaceports"))) {
+    const test = regex.test(f)
+    const result = regex.exec(f)
+    if (test) {
+      xmlData.push(`
+  <url>
+    <loc>https://arrdep.space/spaceports/${result ? result[1] : "null"}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>`)
+    }
+  }
+
   xmlData.push(`\n</urlset>`)
 
-  writeFileSync(pathJoin(process.cwd(), "./public/") + "sitemap.xml", xmlData.join(""))
+  writeFileSync(pathJoin(process.cwd(), "./out/") + "sitemap.xml", xmlData.join(""))
 
   return null
 }
 
 export default generateXML
+generateXML()

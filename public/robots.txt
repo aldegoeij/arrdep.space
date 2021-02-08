@@ -1,4 +1,4 @@
 User-Agent: *
-Disallow: 
+Disallow: /data/*.json
 
 Sitemap: https://arrdep.space/sitemap.xml

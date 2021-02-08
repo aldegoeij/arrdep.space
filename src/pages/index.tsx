@@ -74,10 +74,6 @@ export default function Home({ apiData }: { apiData: APIData }): React.ReactElem
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  // Generate sitemap for entire site
-  const { generateXML } = require("../libs/sitemap.xml")
-  generateXML()
-
   // const apiData = await getArrDeps()
   const apiData = JSON.parse(fs.readFileSync("./public/data/flights.json").toString())
 
