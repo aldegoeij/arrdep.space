@@ -9,10 +9,11 @@ export const meta = {
 ### Version: _January 1, 2020_
 
 export default ({ children, meta }) => (
-  <Layout>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
+  <Layout
+    title={meta.title}
+    description={meta.description}
+    keywords={["privacy", "policy", "cookie"]}
+  >
     <h1>{meta.title}</h1>
     <h4>{meta.subTitle}</h4>
     <p>&nbsp;</p>

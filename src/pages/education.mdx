@@ -20,10 +20,11 @@ export const meta = {
 ### CHINA
 
 export default ({ children, meta }) => (
-  <Layout>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
+  <Layout
+    title={meta.title}
+    description={meta.description}
+    keywords={["education", "learn", "teach"]}
+  >
     <h1>{meta.title}</h1>
     <h4>{meta.subTitle}</h4>
     <p>&nbsp;</p>

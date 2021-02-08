@@ -8,27 +8,87 @@ import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import Navbar from "./navigation"
 
+const DEFAULT_DESCRIPTION =
+  "Launches and landings, to and from space! One central arrivals and departures board for all space flights, to inspire the next generation of space enthusiasts."
+
 export default function Layout({
   children,
   home,
+  title,
+  description,
+  keywords = [],
 }: {
   children: React.ReactChild[]
   home?: boolean
+  title?: string
+  description?: string
+  keywords?: Array<string>
 }) {
   return (
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>{title ? `${title} - ` : ""}ARRDEP.SPACE</title>
         <meta
-          name="description"
-          content="Launches and landings, to and from space! One central arrivals and departures board for all space flights, to inspire the next generation of space enthusiasts."
+          key="og:title"
+          property="og:title"
+          content={`${title ? `${title} - ` : ""}ARRDEP.SPACE`}
         />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={`${title ? `${title} - ` : ""}ARRDEP.SPACE`}
+        ></meta>
+        <meta
+          key="description"
+          name="description"
+          content={description ? description : DEFAULT_DESCRIPTION}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={description ? description : DEFAULT_DESCRIPTION}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={description ? description : DEFAULT_DESCRIPTION}
+        />
+
+        <meta
+          key="keywords"
+          name="keywords"
+          content={keywords
+            .concat([
+              "space",
+              "mission",
+              "flight",
+              "launch",
+              "landing",
+              "arrival",
+              "departure",
+              "rocket",
+              "spaceport",
+              "spaceship",
+              "spacecraft",
+              "date",
+              "time",
+              "schedule",
+              "calendar",
+            ])
+            .join(",")}
+        />
+        <meta
+          key="og:image"
           property="og:image"
           content="https://og-image.now.sh/ARRDEP.SPACE.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"
         />
-        <meta name="og:title" content="ARRDEP.SPACE" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          key="twitter:image"
+          property="twitter:image"
+          content="https://og-image.now.sh/ARRDEP.SPACE.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"
+        />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
       </Head>
       <header>
         <Navbar home={home} />
@@ -48,7 +108,7 @@ export default function Layout({
             id="footer_github"
             href="https://github.com/aldegoeij/arrdep.space/issues/"
             target="_blank"
-            rel="noreferrer"
+            rel="nofollow noopener"
             aria-label="GitHub Issues Link"
           >
             <FontAwesomeIcon icon={faGithub} /> GitHub
@@ -59,7 +119,7 @@ export default function Layout({
             href="https://twitter.com/ArrDepSpace"
             target="_blank"
             aria-label="Twitter Support Link"
-            rel="noreferrer"
+            rel="nofollow noopener"
           >
             <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>

@@ -11,10 +11,13 @@ import { StatusBadge, FlagIcon } from "../../components"
 
 export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport }) {
   return (
-    <Layout home>
-      <Head>
-        <title>{spaceport.name} - Spaceports</title>
-      </Head>
+    <Layout
+      title={spaceport.name}
+      description={`Spaceport information for ${spaceport.name}${
+        spaceport.country ? `, located in ${spaceport.country}.` : "."
+      }`}
+      keywords={spaceport.country ? [spaceport.country] : []}
+    >
       <h1>{spaceport.name}</h1>
       <h4>
         Country: <FlagIcon countryCode={spaceport.countryCode} /> {spaceport.country || "unknown"} |
@@ -32,7 +35,15 @@ export default function SpaceportsOverview({ spaceport }: { spaceport: Spaceport
           launching spacecraft into orbit around Earth or on interplanetary trajectories.
         </Card.Body>
         <Card.Footer>
-          Source: <a href="https://en.wikipedia.org/wiki/Spaceport">Wikipedia</a>
+          Source:{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/Spaceport"
+            target="_blank"
+            aria-label="Wikipedia Link"
+            rel="nofollow noopener"
+          >
+            Wikipedia
+          </a>
         </Card.Footer>
       </Card>
       <p>&nbsp;</p>
