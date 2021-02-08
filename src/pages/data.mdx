@@ -2,7 +2,7 @@ import Head from "next/head"
 import Layout from "../components/layout/layout"
 
 export const meta = {
-  title: "Data API",
+  title: "Our Data API",
   subTitle: "Open Data is the only real Data ;)",
 }
 
@@ -16,10 +16,7 @@ on [Twitter DM](https://twitter.com/messages/compose?recipient_id=13584002779640
 really, really interested ;)
 
 export default ({ children, meta }) => (
-  <Layout>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
+  <Layout title={meta.title} description={meta.description} keywords={["data", "api"]}>
     <h1>{meta.title}</h1>
     <h4>{meta.subTitle}</h4>
     <p>&nbsp;</p>

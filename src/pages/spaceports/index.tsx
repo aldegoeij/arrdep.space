@@ -11,10 +11,7 @@ import { StatusBadge, FlagIcon } from "../../components"
 
 export default function SpaceportsOverview({ spaceports }: { spaceports: Spaceport[] }) {
   return (
-    <Layout home>
-      <Head>
-        <title>Spaceports</title>
-      </Head>
+    <Layout title="Spaceports" description="Growing list of spaceports on earth and known space ;)">
       <h1>Spaceports</h1>
       <p>&nbsp;</p>
       <Card>
@@ -25,7 +22,15 @@ export default function SpaceportsOverview({ spaceports }: { spaceports: Spacepo
           launching spacecraft into orbit around Earth or on interplanetary trajectories.
         </Card.Body>
         <Card.Footer>
-          Source: <a href="https://en.wikipedia.org/wiki/Spaceport">Wikipedia</a>
+          Source:{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/Spaceport"
+            target="_blank"
+            aria-label="Wikipedia Link"
+            rel="nofollow noopener"
+          >
+            Wikipedia
+          </a>
         </Card.Footer>
       </Card>
       <p>&nbsp;</p>

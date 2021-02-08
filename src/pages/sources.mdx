@@ -2,7 +2,7 @@ import Head from "next/head"
 import Layout from "../components/layout/layout"
 
 export const meta = {
-  title: "Data Sources",
+  title: "Our Data Sources",
   subTitle: "We're using public sources to create this site's content.",
 }
 
@@ -19,10 +19,11 @@ export const meta = {
 - Wikipedia: [https://en.wikipedia.org/wiki/Spaceport](https://en.wikipedia.org/wiki/Spaceport) and related pages
 
 export default ({ children, meta }) => (
-  <Layout>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
+  <Layout
+    title={meta.title}
+    description={meta.description}
+    keywords={["date", "source", "reference"]}
+  >
     <h1>{meta.title}</h1>
     <h4>{meta.subTitle}</h4>
     <p>&nbsp;</p>
