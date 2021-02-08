@@ -10,7 +10,7 @@ import Layout from "../components/layout/layout"
 import MainTable from "../components/main-table"
 import { getArrDeps, APIData } from "../libs/api"
 
-export default function Home({ apiData }: { apiData: APIData }): React.ReactElement {
+export default function HomePage({ apiData }: { apiData: APIData }): React.ReactElement {
   return (
     <Layout home>
       <h1>Arrivals &amp; Departures ... from Space!</h1>

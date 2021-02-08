@@ -9,7 +9,7 @@ import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
 import { StatusBadge, FlagIcon } from "../../components"
 
-export default function SpaceportsOverview({ spaceports }: { spaceports: Spaceport[] }) {
+export default function SpaceportsOverviewPage({ spaceports }: { spaceports: Spaceport[] }) {
   return (
     <Layout title="Spaceports" description="Growing list of spaceports on earth and known space ;)">
       <h1>Spaceports</h1>

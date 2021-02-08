@@ -1,0 +1,27 @@
+import Head from "next/head"
+import Layout from "../components/layout/layout"
+
+export const meta = {
+  title: "404 - Not Found",
+  subTitle: "This page does not exist (yet)!",
+}
+
+If you feel this is a bug, file a [GitHub Issue](https://github.com/aldegoeij/arrdep.space/issues/new).
+
+Or check out our list of [spaceports](/spaceports) and keep exploring ;)
+
+Thanks!
+
+export default ({ children, meta }) => (
+  <Layout
+    title={meta.title}
+    description={meta.description}
+    keywords={["term", "terms", "condition"]}
+  >
+    <h1>{meta.title}</h1>
+    <h4>{meta.subTitle}</h4>
+    <p>&nbsp;</p>
+    {children}
+    <p>&nbsp;</p>
+  </Layout>
+)

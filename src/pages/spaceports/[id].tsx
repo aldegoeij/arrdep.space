@@ -9,7 +9,7 @@ import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
 import { StatusBadge, FlagIcon } from "../../components"
 
-export default function Spaceport({ spaceport }: { spaceport: Spaceport }) {
+export default function SpaceportPage({ spaceport }: { spaceport: Spaceport }) {
   return (
     <Layout
       title={spaceport.name}
