@@ -1,4 +1,4 @@
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aldegoeij_arrdep.space&metric=coverage)](https://sonarcloud.io/dashboard?id=aldegoeij_arrdep.space) 
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=arrdep.space&metric=security_rating)](https://sonarcloud.io/dashboard?id=arrdep.space) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=arrdep.space&metric=bugs)](https://sonarcloud.io/dashboard?id=arrdep.space) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aldegoeij_arrdep.space&metric=coverage)](https://sonarcloud.io/dashboard?id=aldegoeij_arrdep.space) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=arrdep.space&metric=code_smells)](https://sonarcloud.io/dashboard?id=arrdep.space) 
 
 # `arrdep.space`
 
