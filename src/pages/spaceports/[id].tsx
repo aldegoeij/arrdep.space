@@ -3,13 +3,20 @@ import * as _ from "lodash"
 import Head from "next/head"
 import Link from "next/link"
 import Layout from "../../components/layout/layout"
-import { Card, Badge } from "react-bootstrap"
+import { Row, Col, Card, Badge, Image } from "react-bootstrap"
+import wiki, { Page } from "wikijs"
 
 import { GetStaticProps, GetStaticPaths } from "next"
 import { getSpaceports, Spaceport } from "../../libs/api"
 import { StatusBadge, FlagIcon } from "../../components"
 
-export default function SpaceportPage({ spaceport }: { spaceport: Spaceport }) {
+export default function SpaceportPage({
+  spaceport,
+  wikiPage,
+}: {
+  spaceport: Spaceport
+  wikiPage: Page
+}) {
   return (
     <Layout
       title={spaceport.name}
@@ -35,10 +42,24 @@ export default function SpaceportPage({ spaceport }: { spaceport: Spaceport }) {
       <p>&nbsp;</p>
       <Card>
         <Card.Body>
-          A <strong>spaceport</strong> or <strong>cosmodrome</strong> is a site for launching (or
-          receiving) spacecraft, by analogy to seaport for ships or airport for aircraft. The word
-          spaceport, and even more so cosmodrome, has traditionally been used for sites capable of
-          launching spacecraft into orbit around Earth or on interplanetary trajectories.
+          <Row>
+            <Col md={8}>
+              {wikiPage.summary
+                ?.toString()
+                .split("\n")
+                .map((p, i) => <p key={i}>{p}</p>) ||
+                "A <strong>spaceport</strong> or <strong>cosmodrome</strong> is a site for launching (or \
+          receiving) spacecraft, by analogy to seaport for ships or airport for aircraft. The word \
+          spaceport, and even more so cosmodrome, has traditionally been used for sites capable of \
+          launching spacecraft into orbit around Earth or on interplanetary trajectories."}
+            </Col>
+            <Col md={4}>
+              <Image
+                src={wikiPage.mainImage?.toString() || "/assets/spaceport.png"}
+                width={"100%"}
+              />
+            </Col>
+          </Row>
         </Card.Body>
         <Card.Footer>
           Source:{" "}
@@ -69,9 +90,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const apiData = JSON.parse(fs.readFileSync("./public/data/spaceports.json").toString())
   const spaceport = apiData.filter((i: Spaceport) => i.id === params?.id)
 
+  const wikiData = await wiki({
+    headers: {
+      "User-Agent": "ArrDepSpace/1.0 (https://arrdep.space/support; mail@aldg.nl) arrdep-space/1.0",
+    },
+  }).page(spaceport[0].wiki_slug)
+
   return {
     props: {
       spaceport: spaceport[0],
+      wikiPage: {
+        summary: (await wikiData.summary()) || null,
+        mainImage: (await wikiData.mainImage()) || null,
+      },
     },
   }
 }

@@ -1,0 +1,26 @@
+import Head from "next/head"
+import Layout from "../components/layout/layout"
+
+export const meta = {
+  title: "Get Support",
+  subTitle:
+    "If you require any form of assistance or contact with the arrdep.space team, look no further.",
+}
+
+## Reach out!
+
+Direct message us on [Twitter](https://twitter.com/ArrDepSpace) to talk to a human or [file an issue](https://github.com/aldegoeij/arrdep.space/issues) on our public GitHub repo.
+
+export default ({ children, meta }) => (
+  <Layout
+    title={meta.title}
+    description={meta.description}
+    keywords={["date", "source", "reference"]}
+  >
+    <h1>{meta.title}</h1>
+    <h4>{meta.subTitle}</h4>
+    <p>&nbsp;</p>
+    {children}
+    <p>&nbsp;</p>
+  </Layout>
+)

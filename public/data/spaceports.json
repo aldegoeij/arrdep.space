@@ -7,6 +7,7 @@
     "countryCode": "ru",
     "status": "operational",
     "wiki_url": "https://en.wikipedia.org/wiki/Baikonur_Cosmodrome",
+    "wiki_slug": "Baikonur_Cosmodrome",
     "url": "http://baikonurtour.com/"
   },
   {
@@ -17,7 +18,8 @@
     "country": "Florida, USA",
     "countryCode": "us",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Space_Force_Station"
+    "wiki_url": "https://en.wikipedia.org/wiki/Cape_Canaveral_Space_Force_Station",
+    "wiki_slug": "Cape_Canaveral_Space_Force_Station"
   },
   {
     "id": "KSC",
@@ -26,7 +28,8 @@
     "country": "Florida, USA",
     "countryCode": "us",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Kennedy_Space_Center"
+    "wiki_url": "https://en.wikipedia.org/wiki/Kennedy_Space_Center",
+    "wiki_slug": "Kennedy_Space_Center"
   },
   {
     "id": "JSLC",
@@ -36,7 +39,8 @@
     "country": "Inner Mongolia, China",
     "countryCode": "cn",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center"
+    "wiki_url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+    "wiki_slug": "Jiuquan_Satellite_Launch_Center"
   },
   {
     "id": "TSLC",
@@ -46,7 +50,8 @@
     "country": "Shanxi, China",
     "countryCode": "cn",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center"
+    "wiki_url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center",
+    "wiki_slug": "Taiyuan_Satellite_Launch_Center"
   },
   {
     "id": "WSLC",
@@ -56,7 +61,8 @@
     "country": "Hainan, China",
     "countryCode": "cn",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Wenchang_Spacecraft_Launch_Site"
+    "wiki_url": "https://en.wikipedia.org/wiki/Wenchang_Spacecraft_Launch_Site",
+    "wiki_slug": "Wenchang_Spacecraft_Launch_Site"
   },
   {
     "id": "XSLC",
@@ -66,6 +72,7 @@
     "country": "Sichuan, China",
     "countryCode": "cn",
     "status": "operational",
-    "wiki_url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center"
+    "wiki_url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center",
+    "wiki_slug": "Xichang_Satellite_Launch_Center"
   }
 ]

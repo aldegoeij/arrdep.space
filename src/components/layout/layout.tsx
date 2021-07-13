@@ -19,7 +19,7 @@ export default function Layout({
   description,
   keywords = [],
 }: {
-  children: React.ReactChild[]
+  children?: React.ReactChild[]
   home?: boolean
   title?: string
   description?: string
