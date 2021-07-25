@@ -28,7 +28,7 @@ export default function SpaceportsOverviewPage({ spaceports }: { spaceports: Spa
             href="https://en.wikipedia.org/wiki/Spaceport"
             target="_blank"
             aria-label="Wikipedia Link"
-            rel="nofollow noopener"
+            rel="nofollow noopener noreferrer"
           >
             Wikipedia
           </a>

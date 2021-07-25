@@ -30,7 +30,7 @@ export default function HomePage({ apiData }: { apiData: APIData }): React.React
             sources
           </a>
         </Link>
-        , at the moment 100% 'au manuel' :)
+        , at the moment 100% &apos;au manuel&apos; :)
       </p>
       <p>&nbsp;</p>
       <h4>What&apos;s this all about?</h4>
@@ -41,8 +41,8 @@ export default function HomePage({ apiData }: { apiData: APIData }): React.React
       </p>
       <p>
         This website with arrivals and departures board and links to spaceports on Earth and known
-        space is the initial result! We're planning on adding more details about space operators,
-        rocket types used to push payloads to space and much more.
+        space is the initial result! We&apos;re planning on adding more details about space
+        operators, rocket types used to push payloads to space and much more.
       </p>
       <p>Check back soon ;)</p>
       <p>&nbsp;</p>
@@ -53,18 +53,18 @@ export default function HomePage({ apiData }: { apiData: APIData }): React.React
           id="homepage_github_issue"
           href="https://github.com/aldegoeij/arrdep.space/issues/new"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="GitHub Issues Link"
         >
           file an issue
         </a>{" "}
-        if you find a bug, or fork the repo and submit a Pull Request! And if you're interested in
-        contributing to the data gathering and/or API behind this site, reach out on{" "}
+        if you find a bug, or fork the repo and submit a Pull Request! And if you&apos;re interested
+        in contributing to the data gathering and/or API behind this site, reach out on{" "}
         <a
           id="homepage_twitter_support"
           href="https://twitter.com/messages/compose?recipient_id=1358400277964083204"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="Twitter Support Link"
         >
           Twitter Direct Message

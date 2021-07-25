@@ -34,7 +34,7 @@ export default function SpaceportPage({
           href={spaceport.wiki_url}
           aria-label="wikipedia link"
           target="_blank"
-          rel="nofollow noopener"
+          rel="nofollow noopener noreferrer"
         >
           Wikipedia
         </a>
@@ -57,6 +57,7 @@ export default function SpaceportPage({
               <Image
                 src={wikiPage.mainImage?.toString() || "/assets/spaceport.png"}
                 width={"100%"}
+                alt={"image of the spaceport"}
               />
             </Col>
           </Row>
@@ -68,7 +69,7 @@ export default function SpaceportPage({
             href="https://en.wikipedia.org/wiki/Spaceport"
             target="_blank"
             aria-label="Wikipedia Link"
-            rel="nofollow noopener"
+            rel="nofollow noopener noreferrer"
           >
             Wikipedia
           </a>

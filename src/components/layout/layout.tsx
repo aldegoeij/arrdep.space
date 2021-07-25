@@ -125,7 +125,7 @@ export default function Layout({
             id="footer_github"
             href="https://github.com/aldegoeij/arrdep.space/issues/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="GitHub Issues Link"
           >
             <FontAwesomeIcon icon={faGithub} /> GitHub
@@ -136,7 +136,7 @@ export default function Layout({
             href="https://twitter.com/ArrDepSpace"
             target="_blank"
             aria-label="Twitter Support Link"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faTwitter} /> Twitter
           </a>
@@ -153,7 +153,7 @@ export default function Layout({
               Privacy Policy
             </a>
           </Link>
-          , you&apos;ll find it's similar to everyone else&apos;s :)
+          , you&apos;ll find it&apos;s similar to everyone else&apos;s :)
         </p>
         <p>&nbsp;</p>
         <p>
