@@ -18,9 +18,10 @@
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^4",
     "bootswatch": "^4",
+    "cheerio": "^1.0.0-rc.10",
     "flag-icon-css": "^3.5.0",
     "gray-matter": "^4.0.3",
-    "infobox-parser": "^3.6.0",
+    "infobox-parser": "^3.6.1",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "next": "^11.0.1",
@@ -30,7 +31,7 @@
     "react-bootstrap": "^1",
     "react-dom": "^17.0.2",
     "react-simple-maps": "^2.3.0",
-    "wikijs": "^6.2.1"
+    "wikijs": "^6.2.3"
   },
   "scripts": {
     "dev": "next dev",
