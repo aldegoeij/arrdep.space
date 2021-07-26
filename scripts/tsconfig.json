@@ -1,6 +1,7 @@
 {
-  "extends": "@tsconfig/next/tsconfig.json",
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
+    "outDir": "out",
     "sourceMap": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
