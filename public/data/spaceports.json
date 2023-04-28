@@ -22,6 +22,57 @@
     "wiki_slug": "Cape_Canaveral_Space_Force_Station"
   },
   {
+    "id": "VBG",
+    "icao": "KVBG",
+    "lid": "VBG",
+    "name": "Vandenberg Space Force Base",
+    "country": "California, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Vandenberg_Space_Force_Base",
+    "wiki_slug": "Vandenberg_Space_Force_Base"
+  },
+  {
+    "id": "WAL",
+    "icao": "KWAL",
+    "iata": "WAL",
+    "lid": "VBG",
+    "name": "Wallops Flight Facility",
+    "country": "Virginia, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Wallops_Flight_Facility",
+    "wiki_slug": "Wallops_Flight_Facility"
+  },
+  {
+    "id": "MARS",
+    "name": "Mid-Atlantic Regional Spaceport",
+    "country": "Virginia, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Mid-Atlantic_Regional_Spaceport",
+    "wiki_slug": "Mid-Atlantic_Regional_Spaceport"
+  },
+  {
+    "id": "RUPC",
+    "name": "Plesetsk Cosmodrome",
+    "country": "Arkhangelsk Oblast, Russia",
+    "countryCode": "ru",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Plesetsk_Cosmodrome",
+    "wiki_slug": "Plesetsk_Cosmodrome"
+  },
+  {
+    "id": "IRSSC",
+    "name": "Semnan Space Center",
+    "alternateNames": ["مرکز فضایی سمنان", "Shahroud Space Center", "پایگاه فضایی شاهرود"],
+    "country": "Shahroud Semnan, Iran",
+    "countryCode": "ir",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Semnan_Space_Center",
+    "wiki_slug": "Semnan_Space_Center"
+  },
+  {
     "id": "KSC",
     "lid": "KSC",
     "name": "Kennedy Space Center",
@@ -30,6 +81,93 @@
     "status": "operational",
     "wiki_url": "https://en.wikipedia.org/wiki/Kennedy_Space_Center",
     "wiki_slug": "Kennedy_Space_Center"
+  },
+  {
+    "id": "PSCA",
+    "name": "Pacific Spaceport Complex - Alaska",
+    "country": "Alaska, USA",
+    "countryCode": "us",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Pacific_Spaceport_Complex_–_Alaska",
+    "wiki_slug": "Pacific_Spaceport_Complex_–_Alaska"
+  },
+  {
+    "id": "NKSSLS",
+    "name": "Sohae Satellite Launching Station",
+    "country": "North Pyongan, North Korea",
+    "countryCode": "kp",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Sohae_Satellite_Launching_Station",
+    "wiki_slug": "Sohae_Satellite_Launching_Station"
+  },
+  {
+    "id": "NSC",
+    "name": "Naro Space Center",
+    "country": "Goheung County, South Korea",
+    "countryCode": "kr",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Naro_Space_Center",
+    "wiki_slug": "Naro_Space_Center"
+  },
+  {
+    "id": "RUVC",
+    "name": "Vostochny Cosmodrome",
+    "alternateNames": ["Космодром Восточный"],
+    "country": "Amur Oblast, Russia",
+    "countryCode": "ru",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Vostochny_Cosmodrome",
+    "wiki_slug": "Vostochny_Cosmodrome"
+  },
+  {
+    "id": "CSG",
+    "name": "Guiana Space Centre",
+    "alternateNames": ["Centre Spatial Guyanais"],
+    "country": "French Guiana",
+    "countryCode": "gf",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Guiana_Space_Centre",
+    "wiki_slug": "Guiana_Space_Centre"
+  },
+  {
+    "id": "KSC",
+    "name": "Uchinoura Space Center",
+    "alternateNames": ["内之浦宇宙空間観測所", "Uchinoura Uchū Kūkan Kansokusho"],
+    "country": "Kagoshima, Japan",
+    "countryCode": "jp",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Uchinoura_Space_Center",
+    "wiki_slug": "Uchinoura_Space_Center"
+  },
+  {
+    "id": "TNSC",
+    "name": "Tanegashima Space Center",
+    "alternateNames": ["種子島宇宙センター", "Tanegashima Uchū Sentā"],
+    "country": "Tanegashima, Japan",
+    "countryCode": "jp",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Tanegashima_Space_Center",
+    "wiki_slug": "Tanegashima_Space_Center"
+  },
+  {
+    "id": "SDSC",
+    "name": "Satish Dhawan Space Centre",
+    "alternateNames": ["Sriharikota Range"],
+    "country": "Sriharikota, India",
+    "countryCode": "in",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Satish_Dhawan_Space_Centre",
+    "wiki_slug": "Satish_Dhawan_Space_Centre"
+  },
+  {
+    "id": "ILPA",
+    "name": "Palmachim Airbase",
+    "alternateNames": ["בָּסִיס חֵיל-הַאֲוִויר פַּלְמַחִים"],
+    "country": "Central District, Israel",
+    "countryCode": "il",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Palmachim_Airbase",
+    "wiki_slug": "Palmachim_Airbase"
   },
   {
     "id": "JSLC",
@@ -74,5 +212,14 @@
     "status": "operational",
     "wiki_url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center",
     "wiki_slug": "Xichang_Satellite_Launch_Center"
+  },
+  {
+    "id": "RLLC1",
+    "name": "Rocket Lab Launch Complex 1",
+    "country": "Mahia Peninsula, New Zealand",
+    "countryCode": "nz",
+    "status": "operational",
+    "wiki_url": "https://en.wikipedia.org/wiki/Rocket_Lab_Launch_Complex_1",
+    "wiki_slug": "Rocket_Lab_Launch_Complex_1"
   }
 ]
